@@ -128,6 +128,8 @@ class MoveNodeForm(forms.Form):
             })
         self.fields['target'].queryset = valid_targets
         self.fields['target'].widget.attrs['size'] = target_select_size
+        self.fields['target'].widget.attrs['class'] = 'custom-select'
+        
         if level_indicator:
             self.fields['target'].level_indicator = level_indicator
         if position_choices:
